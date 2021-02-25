@@ -1,8 +1,14 @@
 import React from "react";
-import "./App.css";
+import SignUp from "./pages/SignUp/SignUp";
+import Home from "./pages/Home/Home";
+import Header from "./components/Header/Header";
 
 const App = () => {
-  return <div></div>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 };
 
 export default App;
