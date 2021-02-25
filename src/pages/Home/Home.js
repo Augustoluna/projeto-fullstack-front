@@ -10,10 +10,10 @@ import {
 const Home = () => {
   return (
     <MainDiv>
-      <Title> SHARIMAGE </Title>
+      <Title> TERNOS AFETOS </Title>
       <ButtonsDiv>
+        <GoToLoginPage> Já possui login? Clique para entrar.</GoToLoginPage>
         <GoToSignUpPage> Não tem um login? Crie aqui. </GoToSignUpPage>
-        <GoToLoginPage> Já possui login. Clique para entrar.</GoToLoginPage>
       </ButtonsDiv>
     </MainDiv>
   );
