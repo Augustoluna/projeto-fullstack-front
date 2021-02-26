@@ -16,7 +16,7 @@ export const LoginDiv = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  background-color: rgba(55, 39, 114, 0.4);
+  background-color: rgba(55, 39, 114, 0.5);
   align-items: center;
   height: 70vh;
   width: 30vw;
@@ -32,7 +32,7 @@ export const Title = styled.p`
   font-size: 20px;
   border-radius: 10px;
   width: 50%;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
 `;
 
@@ -63,7 +63,7 @@ export const LoginButton = styled.button`
   align-items: center;
   font-size: 20px;
   outline: none;
-  border: none;
+  border: 1px solid black;
   background-color: #372772;
   color: #fffff0;
 

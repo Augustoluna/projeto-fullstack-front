@@ -10,7 +10,7 @@ import {
 const Home = () => {
   return (
     <MainDiv>
-      <Title> TERNOS AFETOS </Title>
+      <Title> PICTURESCOOL </Title>
       <ButtonsDiv>
         <GoToLoginPage> Já possui login? Clique para entrar.</GoToLoginPage>
         <GoToSignUpPage> Não tem um login? Crie aqui. </GoToSignUpPage>

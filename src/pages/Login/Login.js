@@ -12,7 +12,7 @@ const Login = () => {
   return (
     <MainDiv>
       <LoginDiv>
-        <Title> LOGIN </Title>
+        <Title> FAÇA SEU LOGIN </Title>
         <NameNickname placeholder="Nome ou Nickname" type="text" />
         <Password placeholder="Senha" type="password" />
         <LoginButton> LOGIN </LoginButton>
