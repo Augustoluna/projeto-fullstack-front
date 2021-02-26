@@ -30,7 +30,6 @@ export const Title = styled.p`
   justify-content: center;
   color: white;
   font-size: 20px;
-
   border-radius: 10px;
   width: 50%;
 `;
