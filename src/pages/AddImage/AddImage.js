@@ -1,11 +1,26 @@
 import React from "react";
-import Styled from "../AddImage/Styled";
+import {
+  MainDiv,
+  AddImageDiv,
+  Title,
+  AddImageInput,
+  SubmitImageButton,
+} from "../AddImage/Styled";
 
 const AddImage = () => {
   return (
-    <div>
-      <p>Página de adicionar imagens</p>
-    </div>
+    <MainDiv>
+      <AddImageDiv>
+        <Title>ENVIE SUA IMAGEM</Title>
+        <AddImageInput placeholder="Subtítulo" name="subtitle" type="text" />
+        <AddImageInput placeholder="Autor" name="author" type="text" />
+        <AddImageInput placeholder="Data" name="date" type="date" />
+        <AddImageInput placeholder="Arquivo" name="file" type="link" />
+        <AddImageInput placeholder="Tags" name="tags" type="text" />
+        <AddImageInput placeholder="Coleção" name="collection" type="text" />
+        <SubmitImageButton> ENVIAR </SubmitImageButton>
+      </AddImageDiv>
+    </MainDiv>
   );
 };
 

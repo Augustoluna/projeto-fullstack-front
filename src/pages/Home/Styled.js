@@ -9,7 +9,7 @@ export const MainDiv = styled.div`
   height: 100vh;
   width: 100vw;
   background-image: url(${landscape});
-  background-size: cover;
+  background-size: 100% 100%;
 `;
 
 export const ButtonsDiv = styled.div`
