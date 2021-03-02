@@ -94,3 +94,25 @@ export const RegisterButton = styled.button`
     color: #fffff0;
   }
 `;
+
+export const GoBackButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5%;
+  width: 20%;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #fcc200;
+    color: black;
+  }
+
+  &:active {
+    background-color: #ff6700;
+    color: #fffff0;
+  }
+`;

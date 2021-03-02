@@ -78,3 +78,25 @@ export const LoginButton = styled.button`
     color: #fffff0;
   }
 `;
+
+export const GoBackButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5%;
+  width: 20%;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #ff6fff;
+    color: black;
+  }
+
+  &:active {
+    background-color: #372772;
+    color: #fffff0;
+  }
+`;
