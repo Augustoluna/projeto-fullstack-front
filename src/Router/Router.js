@@ -8,10 +8,12 @@ import ImageDetails from "../pages/ImageDetails/ImageDetails";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import Header from "../components/Header/Header";
 
 const Router = () => {
   return (
     <BrowserRouter>
+      <Header />
       <Switch>
         <Route exact path="/home">
           <Home />
