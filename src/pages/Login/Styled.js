@@ -27,6 +27,7 @@ export const LoginDiv = styled.div`
 
 export const Title = styled.p`
   display: flex;
+  margin: 0;
   justify-content: center;
   color: white;
   font-size: 20px;
@@ -36,10 +37,19 @@ export const Title = styled.p`
   font-weight: bold;
 `;
 
-export const NameNickname = styled.input`
+export const LoginForm = styled.form`
   display: flex;
-  height: 5%;
-  width: 50%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 75%;
+  width: 80%;
+`;
+
+export const Email = styled.input`
+  display: flex;
+  height: 10%;
+  width: 70%;
   border-radius: 10px;
   border: none;
   outline: none;
@@ -47,8 +57,8 @@ export const NameNickname = styled.input`
 
 export const Password = styled.input`
   display: flex;
-  height: 5%;
-  width: 50%;
+  height: 10%;
+  width: 70%;
   border-radius: 10px;
   border: none;
   outline: none;

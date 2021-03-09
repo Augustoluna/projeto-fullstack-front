@@ -1,28 +1,22 @@
 import React from "react";
 import { useHistory } from "react-router";
-import {
-  MainDiv,
-  LoginDiv,
-  Title,
-  NameNickname,
-  Password,
-  LoginButton,
-  GoBackButton,
-} from "../Login/Styled";
+import useUnprotectedPage from "../../hooks/useUnprotectedPage";
+import { MainDiv, LoginDiv, Title, GoBackButton } from "../Login/Styled";
+import FormsLogin from "./FormsLogin";
 
 const Login = () => {
+  useUnprotectedPage();
   const history = useHistory();
 
   const goBack = () => {
     history.goBack();
   };
+
   return (
     <MainDiv>
       <LoginDiv>
         <Title> FAÇA SEU LOGIN </Title>
-        <NameNickname placeholder="Nome ou Nickname" type="text" />
-        <Password placeholder="Senha" type="password" />
-        <LoginButton> LOGIN </LoginButton>
+        <FormsLogin />
         <GoBackButton onClick={goBack}> VOLTAR </GoBackButton>
       </LoginDiv>
     </MainDiv>

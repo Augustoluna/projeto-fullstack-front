@@ -1,18 +1,11 @@
 import React from "react";
 import { useHistory } from "react-router";
-import {
-  MainDiv,
-  RegisterDiv,
-  Title,
-  InputEmail,
-  InputName,
-  InputNickname,
-  InputPassword,
-  RegisterButton,
-  GoBackButton,
-} from "../SignUp/Styled";
+import useUnprotectedPage from "../../hooks/useUnprotectedPage";
+import { MainDiv, RegisterDiv, Title, GoBackButton } from "../SignUp/Styled";
+import FormsSignUp from "./FormsSignUp";
 
 const SignUp = () => {
+  useUnprotectedPage();
   const history = useHistory();
 
   const goBack = () => {
@@ -23,11 +16,7 @@ const SignUp = () => {
     <MainDiv>
       <RegisterDiv>
         <Title>Preencha os campos abaixo:</Title>
-        <InputName placeholder="Nome" type="text" />
-        <InputNickname placeholder="Nickname" type="text" />
-        <InputEmail placeholder="Email" type="email" />
-        <InputPassword placeholder="Senha (min 6 caracteres)" type="password" />
-        <RegisterButton> Criar Login </RegisterButton>
+        <FormsSignUp />
         <GoBackButton onClick={goBack}> VOLTAR </GoBackButton>
       </RegisterDiv>
     </MainDiv>

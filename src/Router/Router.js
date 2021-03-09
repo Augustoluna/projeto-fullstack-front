@@ -7,12 +7,15 @@ import Home from "../pages/Home/Home";
 import ImageDetails from "../pages/ImageDetails/ImageDetails";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import Header from "../components/Header/Header";
 
 const Router = () => {
   return (
     <BrowserRouter>
+      <Header />
       <Switch>
-        <Route exact path={["/", "/home"]}>
+        <Route exact path="/home">
           <Home />
         </Route>
         <Route exact path="/signup">
@@ -24,11 +27,14 @@ const Router = () => {
         <Route exact path="/addimage">
           <AddImage />
         </Route>
-        <Route exact path="/images">
+        <Route exact path="/">
           <AllImages />
         </Route>
-        <Route exact path="/images/details">
+        <Route exact path="/details/:id">
           <ImageDetails />
+        </Route>
+        <Route>
+          <ErrorPage />
         </Route>
       </Switch>
     </BrowserRouter>

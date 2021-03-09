@@ -1,5 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import useUnprotectedPage from "../../hooks/useUnprotectedPage";
 import {
   MainDiv,
   ButtonsDiv,
@@ -9,6 +10,7 @@ import {
 } from "../Home/Styled";
 
 const Home = () => {
+  useUnprotectedPage();
   const history = useHistory();
 
   const goToLoginPage = () => {

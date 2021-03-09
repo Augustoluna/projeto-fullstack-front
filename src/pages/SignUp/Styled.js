@@ -34,10 +34,19 @@ export const Title = styled.p`
   width: 50%;
 `;
 
+export const SignupForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 75%;
+  width: 80%;
+`;
+
 export const InputName = styled.input`
   display: flex;
-  height: 5%;
-  width: 40%;
+  height: 8%;
+  width: 60%;
   border-radius: 10px;
   border: none;
   outline: none;
@@ -45,8 +54,8 @@ export const InputName = styled.input`
 
 export const InputNickname = styled.input`
   display: flex;
-  height: 5%;
-  width: 40%;
+  height: 8%;
+  width: 60%;
   border-radius: 10px;
   border: none;
   outline: none;
@@ -54,8 +63,8 @@ export const InputNickname = styled.input`
 
 export const InputEmail = styled.input`
   display: flex;
-  height: 5%;
-  width: 40%;
+  height: 8%;
+  width: 60%;
   border-radius: 10px;
   border: none;
   outline: none;
@@ -63,8 +72,8 @@ export const InputEmail = styled.input`
 
 export const InputPassword = styled.input`
   display: flex;
-  height: 5%;
-  width: 40%;
+  height: 8%;
+  width: 60%;
   border-radius: 10px;
   border: none;
   outline: none;
@@ -72,8 +81,8 @@ export const InputPassword = styled.input`
 
 export const RegisterButton = styled.button`
   display: flex;
-  height: 10%;
-  width: 40%;
+  height: 15%;
+  width: 45%;
   border-radius: 10px;
   justify-content: center;
   align-items: center;

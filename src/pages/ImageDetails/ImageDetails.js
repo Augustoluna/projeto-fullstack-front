@@ -1,7 +1,8 @@
 import React from "react";
-import Styled from "../ImageDetails/Styled";
+import useProtectedPage from "../../hooks/useProtectedPage";
 
 const ImageDetails = () => {
+  useProtectedPage();
   return (
     <div>
       <p>Página de detalhamento das imagens</p>

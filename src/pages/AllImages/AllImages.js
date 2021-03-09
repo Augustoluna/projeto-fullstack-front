@@ -1,7 +1,8 @@
 import React from "react";
-import Styled from "../AllImages/Styled";
+import useProtectedPage from "../../hooks/useProtectedPage";
 
 const AllImages = () => {
+  useProtectedPage();
   return (
     <div>
       <p>Página de todas as imagens</p>
