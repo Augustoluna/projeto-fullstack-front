@@ -1,4 +1,5 @@
 import React from "react";
+import useProtectedPage from "../../hooks/useProtectedPage";
 import {
   MainDiv,
   AddImageDiv,
@@ -8,6 +9,7 @@ import {
 } from "../AddImage/Styled";
 
 const AddImage = () => {
+  useProtectedPage();
   return (
     <MainDiv>
       <AddImageDiv>

@@ -1,26 +1,18 @@
 import React from "react";
 import useForm from "../../hooks/useForm";
 import { Email, Password, LoginButton, LoginForm } from "./Styled";
-import axios from "axios";
-import { BASE_URL } from "../../constants/urls";
+import { login } from "../../services/user";
+import { useHistory } from "react-router";
 
 const FormsLogin = () => {
   const [form, onChange, clear] = useForm({ email: "", password: "" });
+  const history = useHistory();
 
   const onSubmitForm = (event) => {
     event.preventDefault();
-    login();
+    login(form, clear, history);
   };
 
-  const login = () => {
-    axios
-      .post(`${BASE_URL}/user/login`, form)
-      .then((res) => {
-        localStorage.setItem("token", res.data.token);
-        clear();
-      })
-      .catch((err) => alert("Erro no login"));
-  };
   return (
     <LoginForm onSubmit={onSubmitForm}>
       <Email

@@ -1,7 +1,7 @@
-import axios from "axios";
 import React from "react";
-import { BASE_URL } from "../../constants/urls";
+import { useHistory } from "react-router";
 import useForm from "../../hooks/useForm";
+import { signUp } from "../../services/user";
 import {
   InputEmail,
   InputName,
@@ -12,6 +12,7 @@ import {
 } from "../SignUp/Styled";
 
 const FormsSignUp = () => {
+  const history = useHistory();
   const [form, onChange, clear] = useForm({
     name: "",
     email: "",
@@ -21,20 +22,7 @@ const FormsSignUp = () => {
 
   const onSubmitForm = (event) => {
     event.preventDefault();
-    signUp();
-  };
-
-  const signUp = () => {
-    axios
-      .post(`${BASE_URL}/user/signup`, form)
-      .then((res) => {
-        localStorage.setItem("token", res.data.token);
-        clear();
-        console.log(res);
-      })
-      .catch((err) => {
-        alert(err.response.data.message);
-      });
+    signUp(form, clear, history);
   };
 
   return (

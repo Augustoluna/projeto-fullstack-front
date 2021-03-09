@@ -1,9 +1,11 @@
 import React from "react";
 import { useHistory } from "react-router";
+import useUnprotectedPage from "../../hooks/useUnprotectedPage";
 import { MainDiv, RegisterDiv, Title, GoBackButton } from "../SignUp/Styled";
 import FormsSignUp from "./FormsSignUp";
 
 const SignUp = () => {
+  useUnprotectedPage();
   const history = useHistory();
 
   const goBack = () => {
