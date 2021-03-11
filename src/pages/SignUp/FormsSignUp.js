@@ -11,7 +11,7 @@ import {
   SignupForm,
 } from "../SignUp/Styled";
 
-const FormsSignUp = () => {
+const FormsSignUp = ({ setRightButton }) => {
   const history = useHistory();
   const [form, onChange, clear] = useForm({
     name: "",
@@ -22,7 +22,7 @@ const FormsSignUp = () => {
 
   const onSubmitForm = (event) => {
     event.preventDefault();
-    signUp(form, clear, history);
+    signUp(form, clear, history, setRightButton);
   };
 
   return (

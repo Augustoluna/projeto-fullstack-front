@@ -4,7 +4,7 @@ import useUnprotectedPage from "../../hooks/useUnprotectedPage";
 import { MainDiv, LoginDiv, Title, GoBackButton } from "../Login/Styled";
 import FormsLogin from "./FormsLogin";
 
-const Login = () => {
+const Login = ({ setRightButton }) => {
   useUnprotectedPage();
   const history = useHistory();
 
@@ -16,7 +16,7 @@ const Login = () => {
     <MainDiv>
       <LoginDiv>
         <Title> FAÇA SEU LOGIN </Title>
-        <FormsLogin />
+        <FormsLogin setRightButton={setRightButton} />
         <GoBackButton onClick={goBack}> VOLTAR </GoBackButton>
       </LoginDiv>
     </MainDiv>

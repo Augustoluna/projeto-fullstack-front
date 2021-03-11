@@ -4,13 +4,13 @@ import { Email, Password, LoginButton, LoginForm } from "./Styled";
 import { login } from "../../services/user";
 import { useHistory } from "react-router";
 
-const FormsLogin = () => {
+const FormsLogin = ({ setRightButton }) => {
   const [form, onChange, clear] = useForm({ email: "", password: "" });
   const history = useHistory();
 
   const onSubmitForm = (event) => {
     event.preventDefault();
-    login(form, clear, history);
+    login(form, clear, history, setRightButton);
   };
 
   return (
