@@ -3,12 +3,19 @@ import { BASE_URL } from "../../constants/urls";
 import ImageCard from "../../components/ImageCard/ImageCard";
 import useProtectedPage from "../../hooks/useProtectedPage";
 import useRequestData from "../../hooks/useRequestData";
-import { MainDiv } from "./Styled";
+import { AddImageButton, MainDiv } from "./Styled";
+import { Add } from "@material-ui/icons";
+import { goToAddImage, goToImageDetails } from "../../Router/coordinator";
+import { useHistory } from "react-router";
 
 const AllImages = () => {
   useProtectedPage();
+  const history = useHistory();
   const images = useRequestData([], `${BASE_URL}/image/all`);
-  console.log(images);
+
+  const onClickCard = (id) => {
+    goToImageDetails(history, id);
+  };
 
   const imageCards = images.map((image) => {
     return (
@@ -16,12 +23,19 @@ const AllImages = () => {
         key={image.id}
         title={image.subtitle}
         image={image.file}
-        onClick={() => null}
+        onClick={() => onClickCard(image.id)}
       />
     );
   });
 
-  return <MainDiv>{imageCards}</MainDiv>;
+  return (
+    <MainDiv>
+      {imageCards}
+      <AddImageButton color="primary" onClick={() => goToAddImage(history)}>
+        <Add />
+      </AddImageButton>
+    </MainDiv>
+  );
 };
 
 export default AllImages;

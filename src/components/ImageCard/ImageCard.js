@@ -5,10 +5,8 @@ import Typography from "@material-ui/core/Typography";
 import { ImageCardContainer, ImageCardContent } from "./Styled";
 
 const ImageCard = (props) => {
-  console.log(props);
   return (
     <ImageCardContainer onClick={props.onClick}>
-      <p>{props.title}</p>
       <CardActionArea>
         <CardMedia
           component={"img"}
