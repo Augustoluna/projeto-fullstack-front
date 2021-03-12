@@ -5,6 +5,7 @@ import CardContent from "@material-ui/core/CardContent";
 export const ImageCardContainer = styled(Card)`
   width: 250px;
   margin: 10px;
+  color: black;
 `;
 
 export const ImageCardContent = styled(CardContent)`
