@@ -12,7 +12,7 @@ import { createImage } from "../../services/image";
 const FormsAddImage = () => {
   const [form, onChange, clear] = useForm({
     subtitle: "",
-    tagsIds: [],
+    tagsId: [],
     file: "",
     collectionId: "",
   });
@@ -27,7 +27,7 @@ const FormsAddImage = () => {
       <FormsAddImageContainer>
         <InputsContainer>
           <TextField
-            name={"title"}
+            name={"subtitle"}
             value={form.subtitle}
             onChange={onChange}
             label={"Título"}
@@ -38,7 +38,7 @@ const FormsAddImage = () => {
             margin={"normal"}
           />
           <TextField
-            name={"collection"}
+            name={"collectionId"}
             value={form.collectionId}
             onChange={onChange}
             label={"Coleção"}
@@ -48,7 +48,7 @@ const FormsAddImage = () => {
             margin={"normal"}
           />
           <TextField
-            name={"tags"}
+            name={"tagsId"}
             value={form.tagsId}
             onChange={onChange}
             label={"Tags"}
@@ -58,10 +58,10 @@ const FormsAddImage = () => {
             margin={"normal"}
           />
           <TextField
-            name={"image"}
+            name={"file"}
             value={form.file}
             onChange={onChange}
-            label={"Foto"}
+            label={"Link da imagem"}
             variant={"outlined"}
             fullWidth
             required

@@ -11,8 +11,10 @@ export const createImage = (body, clear) => {
     .then((res) => {
       alert(res.data.message);
       clear();
+      console.log(body);
     })
     .catch((err) => {
       alert(err.response.message);
+      console.log(body);
     });
 };
